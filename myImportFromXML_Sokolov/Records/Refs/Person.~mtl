@@ -1,7 +1,0 @@
-record Person inherited Com.Base.CodeName title "";
-
-     struct Subtable;
-            Field Code :String;
-            Field Name :String;
-     end;
-end;

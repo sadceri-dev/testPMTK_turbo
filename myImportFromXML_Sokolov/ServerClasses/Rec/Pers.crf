@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Resource Version="2" Inherited="Com.Rec.CodeName">
-  <Inherited>
-    <Inherited Name="Code" Visible="True"/>
-    <Inherited Name="Name" Caption="@CodeName:Name=Имя" Visible="True"/>
-  </Inherited>
-</Resource>
