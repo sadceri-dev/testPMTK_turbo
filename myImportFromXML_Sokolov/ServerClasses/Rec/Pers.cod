@@ -1,0 +1,10 @@
+class inherited Com.Rec.CodeName "";
+
+inclass public
+        var RecordClass :Class Record :=Refs.Person;
+
+inobject private
+
+
+
+end

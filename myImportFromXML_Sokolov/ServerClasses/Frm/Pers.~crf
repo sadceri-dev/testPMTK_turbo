@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource Version="2" Inherited="Com.Frm.ICodeName">
+  <Inherited>
+    <Inherited Name="TableMenu" Enabled="True" Visible="True"/>
+    <Inherited Name="RootFrame">
+      <Inherited Name="HeaderFrame">
+        <Inherited Name="ButtonImport" Excluded="False" Visible="False"/>
+      </Inherited>
+      <Inherited Name="FieldsFrame" Orientation="Horizontal">
+        <Component Name="Export" Class="Com.Ctrl.IButton" After="#0" Caption="Export" Enabled="True" OnClick="ButtonExport_OnClick" Visible="True"/>
+        <Component Name="Load" Class="Com.Ctrl.IButton" Caption="Load from XML" Color="0xFF000005" FontColor="0xFF00000D" OnClick="ButtonImport_OnClick" Visible="True"/>
+        <Inherited Name="Group1" Enabled="True"/>
+      </Inherited>
+    </Inherited>
+  </Inherited>
+</Resource>

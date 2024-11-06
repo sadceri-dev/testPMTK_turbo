@@ -1,0 +1,3 @@
+document Doc inherited Com.Base.CodeName title "";
+         field User :Refs.Person;
+end;

@@ -1,0 +1,62 @@
+class inherited Com.Frm.ICodeName "";
+
+  --proc ButtonExport_OnClick(aSender :Com.Ctrl.IControl; aIndex :Integer)
+--    --var Q :Query;
+--    var exFile :String;
+--    var ExportObj :Exporter;
+--    -- инициализируем выборку документов конкретного типа
+--
+---- предлагаем пользователю выбрать имя файла для экспорта
+--    if ChooseFile(exFile, 'Выбор файла','Данные в формате xml|*.xml') = cmOk then
+--    -- создаем объект-экспортер
+--    ExportObj = Exporter.Create(Self, exFile, True, [Exporter.ShowWizard]);
+--    ExportObj.StartExport(exFile, 'xml');
+--    -- экспортируем всю выборку
+--    --Q = Query.Create(['myImportFromXML']);
+------ задаем условия отбора документов
+----    Q.Filter = 'Номер > 3';
+------ формируем выборку
+----    Q.Select;
+--    ExportObj.ExportAll;
+--    ExportObj.EndExport;
+--  end;
+--    inherited ButtonExport_OnClick(aSender, aIndex)
+--  end
+
+  proc ButtonImport_OnClick(aSender :Com.Ctrl.IControl; aIndex :Integer)
+    var fName :String;
+    var ImportObj :Importer;
+    if ChooseFile(fName, "Choose file", "Data file format xml| .xml")<> cmOk then
+    return;
+    end
+    --ImportObj.ImportFRomFile(fName, '*.xml');
+
+    ImportObj = Importer.Create(self, fName, True, [Importer.ShowWizard]);
+    --ImportObj.AutoCorr =False;
+    ImportObj.SaveCorrespondence(fName);
+    --ImportObj.AddCorrespondence('myImportFromXML','Full',['Code' = 'Code', 'Name'='Name']);
+    ImportObj.ImportRecords;
+   -- ImportObj.ImportFromFile(fName, '*.xml');
+
+
+
+
+
+
+    inherited ButtonImport_OnClick(aSender, aIndex)
+
+  end
+
+
+
+
+inclass public
+        var UseResource :Logical :=true;
+        var RecordClass :Class Com.Rec.CodeName :=Rec.Pers;
+
+        func importxml :variant
+
+          Result = nil
+        end
+
+End
